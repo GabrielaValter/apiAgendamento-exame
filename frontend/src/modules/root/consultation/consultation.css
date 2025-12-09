@@ -1,0 +1,60 @@
+.consultas-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.consultas-card {
+    width: 95%;
+    max-width: 1100px;
+    padding: 8px 20px 20px;
+}
+
+.full-table {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.empty-state {
+    margin-top: 32px;
+    text-align: center;
+    color: #666;
+}
+
+.empty-icon {
+    font-size: 46px;
+    height: 46px;
+    width: 46px;
+    color: #7b1fa2;
+    margin-bottom: 8px;
+}
+
+.empty-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.empty-subtitle {
+    font-size: 14px;
+}
+
+.consultas-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn-new {
+    min-width: 230px;
+    height: 44px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    gap: 8px;
+}

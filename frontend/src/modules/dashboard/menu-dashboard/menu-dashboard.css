@@ -1,0 +1,17 @@
+.nav-bar {
+    background-color: #673ab7; /* roxo Angular Material */
+    color: #ffffff;
+}
+
+.nav-bar button {
+    margin: 0 8px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}

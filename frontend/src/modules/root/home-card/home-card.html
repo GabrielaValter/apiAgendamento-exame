@@ -1,0 +1,45 @@
+<div class="home-wrapper">
+    <mat-card class="home-card">
+        <mat-card-header>
+            <div mat-card-avatar class="home-avatar">
+                <mat-icon>event</mat-icon>
+            </div>
+            <mat-card-title>
+                Olá, {{ user?.nome || 'bem-vindo ao Sistema de Agendamento' }}
+            </mat-card-title>
+            <mat-card-subtitle>
+                Esta é a sua área inicial
+            </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="user-info">
+                <h3>Dados do usuário</h3>
+
+                <p><span>Nome:</span> {{ user?.nome || 'Não informado' }}</p>
+                <p><span>Email:</span> {{ user?.email || 'Não informado' }}</p>
+                <p>
+                    <span>Perfil:</span>
+                    {{ user?.tipo === 'C' ? 'Cliente'
+                    : (user?.tipo === 'P' ? 'Profissional' : 'Não informado') }}
+                </p>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="next-actions">
+                <h3>O que você pode fazer agora?</h3>
+                <ul>
+                    <li>✔ Acessar o menu <strong>Consultas</strong> para ver seus agendamentos.</li>
+                    <li *ngIf="user?.tipo === 'C'">
+                        ✔ Solicitar novas <strong>consultas</strong> com os profissionais disponíveis.
+                    </li>
+                    <li *ngIf="user?.tipo === 'P'">
+                        ✔ Gerenciar <strong>consultas de pacientes</strong> e horários.
+                    </li>
+                    <li>✔ Encerrar a sessão clicando em <strong>Logout</strong> no canto superior direito.</li>
+                </ul>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

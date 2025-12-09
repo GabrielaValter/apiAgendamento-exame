@@ -1,0 +1,79 @@
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ece9f7, #f5f3ff);
+    padding: 16px;
+}
+
+.login-panel {
+    width: 100%;
+    max-width: 420px;
+}
+
+.title {
+    padding: 10px;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    color: #4a148c;
+}
+
+.brand-text span {
+    font-size: 14px;
+    color: #666;
+}
+
+.login-card {
+    padding: 14px 22px 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.full {
+    width: 100%;
+}
+
+mat-form-field {
+    margin-bottom: 18px;
+}
+
+.btn-login {
+    background-color: #7b1fa2 !important;
+    color: #ffffff !important;
+    height: 44px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #6a1b9a !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(123, 31, 162, 0.4);
+}
+
+.register-link {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.register-link a {
+    color: #3f51b5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

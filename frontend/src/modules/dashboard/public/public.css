@@ -1,0 +1,68 @@
+.titulo {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #673ab7;
+}
+
+/* Grid responsivo */
+.grid-container {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Flipbox container */
+.flip-card {
+    width: 100%;
+    height: 180px;
+    perspective: 900px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Faces */
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-front h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.flip-front .valor {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.flip-back {
+    background: #3f51b5;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+mat-card {
+    border-radius: 12px;
+}

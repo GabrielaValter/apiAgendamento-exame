@@ -1,0 +1,21 @@
+<h1 class="titulo">Visão Geral</h1>
+
+<div class="grid-container">
+
+    <div class="flip-card" *ngFor="let card of cards">
+        <div class="flip-inner">
+
+            <mat-card class="flip-front">
+                <h2>{{ card.title }}</h2>
+                <p class="valor">{{ card.value }}</p>
+            </mat-card>
+
+            <mat-card class="flip-back">
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.desc }}</p>
+            </mat-card>
+
+        </div>
+    </div>
+
+</div>

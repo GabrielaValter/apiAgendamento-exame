@@ -1,0 +1,75 @@
+<div class="login-page">
+    <div class="login-panel">
+
+        <div class="brand">
+            <div class="brand-text">
+                <h1>Agendamento</h1>
+                <span>Sistema de gerenciamento</span>
+            </div>
+        </div>
+
+        <mat-card class="login-card">
+            <div class="title">
+                <mat-card-title>Criar conta</mat-card-title>
+            </div>
+
+            <mat-card-content>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                    <mat-form-field appearance="outline" class="full">
+                        <mat-label>Nome</mat-label>
+                        <mat-icon matPrefix>person</mat-icon>
+                        <input matInput formControlName="nome" />
+                        <mat-error *ngIf="form.get('nome')?.hasError('required')">
+                            Nome é obrigatório
+                        </mat-error>
+                        <mat-error *ngIf="form.get('nome')?.hasError('minlength')">
+                            Mínimo 3 caracteres
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full">
+                        <mat-label>Email</mat-label>
+                        <mat-icon matPrefix>mail</mat-icon>
+                        <input matInput formControlName="email" type="email" />
+                        <mat-error *ngIf="form.get('email')?.hasError('required')">
+                            Email é obrigatório
+                        </mat-error>
+                        <mat-error *ngIf="form.get('email')?.hasError('email')">
+                            Informe um e-mail válido
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full">
+                        <mat-label>Senha</mat-label>
+                        <mat-icon matPrefix>lock</mat-icon>
+                        <input matInput formControlName="senha" type="password" />
+                        <mat-error *ngIf="form.get('senha')?.hasError('required')">
+                            Senha é obrigatória
+                        </mat-error>
+                        <mat-error *ngIf="form.get('senha')?.hasError('minlength')">
+                            Mínimo 3 caracteres
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full">
+                        <mat-label>Telefone</mat-label>
+                        <mat-icon matPrefix>phone</mat-icon>
+                        <input matInput formControlName="telefone" />
+                    </mat-form-field>
+
+                    <button mat-raised-button class="btn-login full" type="submit">
+                        Registrar
+                    </button>
+
+                    <div class="register-link">
+                        <span>Já tem uma conta?</span>
+                        <a routerLink="/login">Entrar</a>
+                    </div>
+
+                </form>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>
