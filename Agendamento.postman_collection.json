@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "c50e34bf-9e0b-4272-b1fb-4885269ffcdf",
+		"name": "Agendamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47510225"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "criarCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Ana Cliente\",\r\n  \"email\": \"cliente@teste.com\",\r\n  \"senha\": \"123\",\r\n  \"telefone\": \"55999999999\",\r\n  \"tipo\": \"C\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarUsuarioPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Ana Cliente Atualizada\",\r\n  \"email\": \"ana3.atualiza@exemplo.com\",\r\n  \"senha\": \"novaSenha123\",\r\n  \"telefone\": \"55999990000\",\r\n  \"tipo\": \"C\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criarUsuarioProfissional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Joao Profissional\",\r\n  \"email\": \"profissional@teste.com\",\r\n  \"senha\": \"123\",\r\n  \"telefone\": \"55988887777\",\r\n  \"tipo\": \"P\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servico",
+			"item": [
+				{
+					"name": "criarServico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Consulta Clínica\",\r\n  \"descricao\": \"Consulta de avaliação geral\",\r\n  \"valor\": 150.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/servicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"servicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarServicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/servicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"servicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarServicoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarServico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Consulta Clínica Atualizada\",\r\n  \"descricao\": \"Consulta com retorno incluído\",\r\n  \"valor\": 180.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirServico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profissional",
+			"item": [
+				{
+					"name": "criarProfissional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuarioId\": 2,\r\n  \"area\": \"Clínica Geral\",\r\n  \"descricao\": \"Médico clínico geral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarProfissionais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarProfissionalPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarProfissional",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuarioId\": 2,\r\n  \"area\": \"Clínica Geral e Reumatologia Atualizada\",\r\n  \"descricao\": \"Atendimento em clínica geral e reumatologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vincularServico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais/2/servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais",
+								"2",
+								"servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarServicosProfissional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais/2/servicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais",
+								"2",
+								"servicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "desvincularServico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais/2/servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais",
+								"2",
+								"servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirProfissional",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/profissionais/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"profissionais",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agendamento",
+			"item": [
+				{
+					"name": "criarAgendamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clienteId\": 1,\r\n  \"profissionalId\": 2,\r\n  \"servicoId\": 1,\r\n  \"data\": \"2025-12-10\",\r\n  \"observacao\": \"Chegar 10 minutos antes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarAgendamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarAgendamentoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarStatusAgendamento",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"CONFIRMADO\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos/1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarAgendamentosCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarAgendamentosProfissional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos/profissional/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos",
+								"profissional",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirAgendamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/agendamentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"agendamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
